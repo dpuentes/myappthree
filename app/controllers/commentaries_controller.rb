@@ -1,5 +1,6 @@
 class CommentariesController < ApplicationController
   before_action :set_commentary, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /commentaries or /commentaries.json
   def index
