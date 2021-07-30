@@ -17,7 +17,6 @@ class CaloriesTest < ApplicationSystemTestCase
     fill_in "Calory type", with: @calory.Calory_type
     fill_in "Value", with: @calory.Value
     fill_in "Date registre", with: @calory.date_registre
-    fill_in "Float", with: @calory.float
     click_on "Create Calory"
 
     assert_text "Calory was successfully created"
@@ -31,7 +30,6 @@ class CaloriesTest < ApplicationSystemTestCase
     fill_in "Calory type", with: @calory.Calory_type
     fill_in "Value", with: @calory.Value
     fill_in "Date registre", with: @calory.date_registre
-    fill_in "Float", with: @calory.float
     click_on "Update Calory"
 
     assert_text "Calory was successfully updated"

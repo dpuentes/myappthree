@@ -64,6 +64,6 @@ class CaloriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def calory_params
-      params.require(:calory).permit(:date_registre, :Calory_type, :Value, :float)
+      params.require(:calory).permit(:date_registre, :Calory_type, :Value)
     end
 end
