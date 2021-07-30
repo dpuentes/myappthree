@@ -1,0 +1,37 @@
+<%= form_with(model: calory) do |form| %>
+  <% if calory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(calory.errors.count, "error") %> prohibited this calory from being saved:</h2>
+
+      <ul>
+        <% calory.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date_registre %>
+    <%= form.datetime_select :date_registre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Calory_type %>
+    <%= form.text_field :Calory_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Value %>
+    <%= form.text_field :Value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :float %>
+    <%= form.text_field :float %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

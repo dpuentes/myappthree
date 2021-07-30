@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Calories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date registre</th>
+      <th>Calory type</th>
+      <th>Value</th>
+      <th>Float</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calories.each do |calory| %>
+      <tr>
+        <td><%= calory.date_registre %></td>
+        <td><%= calory.Calory_type %></td>
+        <td><%= calory.Value %></td>
+        <td><%= calory.float %></td>
+        <td><%= link_to 'Show', calory %></td>
+        <td><%= link_to 'Edit', edit_calory_path(calory) %></td>
+        <td><%= link_to 'Destroy', calory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Calory', new_calory_path %>
