@@ -15,6 +15,7 @@ class CommentariesTest < ApplicationSystemTestCase
     click_on "New Commentary"
 
     fill_in "Content", with: @commentary.Content
+    fill_in "Calory", with: @commentary.calory_id
     click_on "Create Commentary"
 
     assert_text "Commentary was successfully created"
@@ -26,6 +27,7 @@ class CommentariesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Content", with: @commentary.Content
+    fill_in "Calory", with: @commentary.calory_id
     click_on "Update Commentary"
 
     assert_text "Commentary was successfully updated"

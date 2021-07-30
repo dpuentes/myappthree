@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>User</th>
       <th>Date registre</th>
       <th>Calory type</th>
       <th>Value</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @calories.each do |calory| %>
       <tr>
+        <td><%= calory.user_id %></td>
         <td><%= calory.date_registre %></td>
         <td><%= calory.Calory_type %></td>
         <td><%= calory.Value %></td>

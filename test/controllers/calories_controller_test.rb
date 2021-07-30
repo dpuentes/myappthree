@@ -17,7 +17,7 @@ class CaloriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create calory" do
     assert_difference('Calory.count') do
-      post calories_url, params: { calory: { Calory_type: @calory.Calory_type, Value: @calory.Value, date_registre: @calory.date_registre } }
+      post calories_url, params: { calory: { Calory_type: @calory.Calory_type, Value: @calory.Value, date_registre: @calory.date_registre, user_id: @calory.user_id } }
     end
 
     assert_redirected_to calory_url(Calory.last)
@@ -34,7 +34,7 @@ class CaloriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update calory" do
-    patch calory_url(@calory), params: { calory: { Calory_type: @calory.Calory_type, Value: @calory.Value, date_registre: @calory.date_registre } }
+    patch calory_url(@calory), params: { calory: { Calory_type: @calory.Calory_type, Value: @calory.Value, date_registre: @calory.date_registre, user_id: @calory.user_id } }
     assert_redirected_to calory_url(@calory)
   end
 

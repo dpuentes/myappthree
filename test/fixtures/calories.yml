@@ -1,11 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  date_registre: 2021-07-30 00:07:31
+  user: one
+  date_registre: 2021-07-30 09:44:45
   Calory_type: MyString
   Value: 1.5
 
 two:
-  date_registre: 2021-07-30 00:07:31
+  user: two
+  date_registre: 2021-07-30 09:44:45
   Calory_type: MyString
   Value: 1.5

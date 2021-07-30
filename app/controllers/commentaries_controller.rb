@@ -64,6 +64,6 @@ class CommentariesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def commentary_params
-      params.require(:commentary).permit(:Content)
+      params.require(:commentary).permit(:calory_id, :Content)
     end
 end
