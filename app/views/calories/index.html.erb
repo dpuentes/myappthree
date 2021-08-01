@@ -1,31 +1,35 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Calories</h1>
+  <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Date registre</th>
-      <th>Calory type</th>
-      <th>Value</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h6 class="subtitle is-6 has-text-centered">Calories</h6>
+  <div class="columns is-mobile is-centered">
+    <table>
+      <thead>
+        <tr>
+          <th>Date registre</th>
+          <th>Calory type</th>
+          <th>Value</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @calories.each do |calory| %>
-      <tr>
-        <td><%= calory.date_registre %></td>
-        <td><%= calory.Calory_type %></td>
-        <td><%= calory.Value %></td>
-        <td><%= link_to 'Show', calory %></td>
-        <td><%= link_to 'Edit', edit_calory_path(calory) %></td>
-        <td><%= link_to 'Destroy', calory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @calories.each do |calory| %>
+          <tr>
+            <td><%= calory.date_registre %></td>
+            <td><%= calory.Calory_type %></td>
+            <td><%= calory.Value %></td>
+            <td><%= link_to 'Show', calory %></td>
+            <td><%= link_to 'Edit', edit_calory_path(calory) %></td>
+            <td><%= link_to 'Destroy', calory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<br>
-
-<%= link_to 'New Calory', new_calory_path %>
+    <br>
+  </div>
+<div class="columns is-mobile is-centered">
+  <%= link_to 'New Calory', new_calory_path %>
+</div>
+ 

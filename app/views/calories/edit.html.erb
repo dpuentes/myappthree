@@ -1,6 +1,9 @@
-<h1>Editing Calory</h1>
+
+<h6 class="subtitle is-6 has-text-centered">Editing Calory</h6>
 
 <%= render 'form', calory: @calory %>
 
-<%= link_to 'Show', @calory %> |
-<%= link_to 'Back', calories_path %>
+<div class="columns is-mobile is-centered">
+    <%= link_to 'Show', @calory %> |
+    <%= link_to 'Back', calories_path %>
+</div>

@@ -1,3 +1,4 @@
+<div class="columns is-mobile is-centered">
 <%= form_with(model: commentary) do |form| %>
   <% if commentary.errors.any? %>
     <div id="error_explanation">
@@ -20,3 +21,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>
